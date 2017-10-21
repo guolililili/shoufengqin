@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>手风琴</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div class="wrapper" id="subject">
+		<ul>
+			<li>
+				<a href="#">
+				  <img src="imags/1.jpg">
+				  <i class="link"></i>
+				  <i class="mask"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				  <img src="imags/2.jpg">
+				  <i class="link"></i>
+				  <i class="mask"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				  <img src="imags/3.jpg">
+				  <i class="link"></i>
+				  <i class="mask"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				  <img src="imags/4.jpg">
+				  <i class="link"></i>
+				  <i class="mask"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+				  <img src="imags/5.jpg">
+				  <i class="link"></i>
+				  <i class="mask"></i>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+ //   function  bind(el,evenType,callback){
+ //   	if(typeof el.addEventListener === 'function'){
+ //   		el.addEventListener(el,evenType,callback,false);
+ //   	}else if(typeof el.attechEvent ==='function'){
+ //        el.attachEvent('on'+evenType,callback);
+ //   	}
+ //   }
+ //   function mousoverHandler(e){
+ //       var target = e.target || e.srcElement;
+ //       var outer  = document.getElementById('subject');
+	//    var list = outer.getElementsByTagName('li');
+	//    for(var i = 0;i<list.length;i++){
+	//    	   list[i].className = '';
+	//    }
+	//    while(target.tagName != 'LI' && target.tagName != 'BODY'){
+	//    	  target = target.parentNode;
+	//    }
+	//    target.className = 'big';
+ //   }
+	// function initList(){
+	// 	var outer  = document.getElementById('subject');
+	// 	var list = outer.getElementsByTagName('li');
+	// 	for(var i = 0;i<list.length;i++){
+	// 		bind(list[i],'mouseover',mousoverHandler);
+	// 	}
+	// }
+	// initList();
+	 window.onload=function(){
+	 	var outer=document.getElementById('subject');
+        var list=outer.getElementsByTagName('li');
+        for(var i=0;i<list.length;i++){ 
+        	list[i].onmouseover=function(){
+			for(var i=0;i<list.length;i++){
+				list[i].className=''; 
+			}
+			this.className='big';
+		}
+	}
+}
+</script>
+</html>

@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.wrapper{
+	width: 1600px;
+	height: 128px;
+	border:1px solid #d3d3d3;
+}
+.wrapper ul *{
+	transition: all linear 0.1s;
+	/*all 对所有属性 */
+}
+.wrapper li{
+	width: 200px;
+    height: 128px;
+    float: left;
+    overflow: hidden;
+}
+.wrapper li a{
+	display: block;
+	height: 128px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.wrapper img{
+	position: absolute;
+	bottom: 0;
+	right: -15px;
+	height: 72px;
+	width: 117px;
+}
+.wrapper .line{
+	position: absolute;
+	right: 0;
+	width: 0;
+	/**/
+	height: 128px;
+	border:3px dashed #ff0000;
+}
+.wrapper .mask{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 128px;
+	width: 200px;
+	background: #000;
+	opacity: 0;
+}
+.wrapper:hover .mask{
+	opacity: 0.15;
+}
+.wrapper li.big,li.big a{
+	width: 314px;
+}
+
+.wrapper li.big img{
+	width: 200px;
+	height: 120px;
+	right:0;
+	bottom: 0;
+}
+.wrapper li.big a:hover .mask{
+	opacity: 0;
+}
